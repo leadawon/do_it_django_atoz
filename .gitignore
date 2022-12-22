@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Pycharm
+.idea/
+
+# private
+dp.sqlite3
+/do_it_django_prj/settings.py
