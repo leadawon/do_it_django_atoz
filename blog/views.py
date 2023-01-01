@@ -1,18 +1,24 @@
 from django.shortcuts import render
 from .models import Post
-# Create your views here.
-def index(request):
-    posts = Post.objects.all().order_by('-pk')
-    #query to database
-    # post 를 가져와라.
 
-    return render(
-        request,
-        'blog/index.html',
-        {
-            'posts':posts,
-        }
-    )
+from django.views.generic import ListView
+# Create your views here.
+# def index(request):
+#     posts = Post.objects.all().order_by('-pk')
+#     #query to database
+#     # post 를 가져와라.
+#
+#     return render(
+#         request,
+#         'blog/post_list.html',
+#         {
+#             'posts':posts,
+#         }
+#     )
+
+class PostList(ListView):
+    model = Post
+    ordering = '-pk'
 
 def single_post_page(request,pk):
     post = Post.objects.get(pk=pk)
