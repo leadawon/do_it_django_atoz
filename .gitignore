@@ -130,7 +130,7 @@ dmypy.json
 
 # Pycharm
 .idea/
-
+_media/
 # private
 dp.sqlite3
 /do_it_django_prj/settings.py
