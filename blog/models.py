@@ -59,7 +59,7 @@ class Post(models.Model):
     def get_file_ext(self):
         return self.get_file_name().split('.')[-1]
 
-    def get_content_markdonw(self):
+    def get_content_markdown(self):
         return markdown(self.content)
 
 
