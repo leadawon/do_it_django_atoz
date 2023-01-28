@@ -1,12 +1,18 @@
 from django.shortcuts import render
+from blog.models import Post
 
-# Create your views here.
+
 def landing(request):
+    recent_posts = Post.objects.order_by('-pk')[:3]
+
     return render(
         request,
-        'single_pages/landing.html'
+        'single_pages/landing.html',
+        {
+            'recent_posts': recent_posts,
+        }
     )
-#blog\views.py 처럼 딕셔너리로 post를 받을 필요가 없다.
+
 
 def about_me(request):
     return render(
