@@ -136,3 +136,4 @@ dp.sqlite3
 /do_it_django_prj/settings.py
 
 migrations/
+.env.dev
