@@ -142,3 +142,4 @@ migrations/
 
 docker-compose.yml
 
+no_commit/
